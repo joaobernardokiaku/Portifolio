@@ -1,0 +1,708 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.azul{
+    color: deepskyblue;
+}
+
+body{
+    width: 100%;
+    position: absolute;
+}
+
+/* ////////////// Barra de menu /////////////// */
+body nav{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.899);
+    border-bottom: 2px solid deepskyblue;
+}
+
+nav div h3{
+    font-size: 1.6em;
+}
+
+body nav #menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+body nav #menu li{
+    margin: 0 8px;
+}
+
+body nav #menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+body nav #menu li a:hover{
+    border-bottom: 1px solid deepskyblue;
+}
+
+body nav #menu li a:active{
+    color: deepskyblue;
+}
+
+/* ////////////// Container header /////////////// */
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/imagem.jpg);
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: 55vh;
+    background-color: #fff;
+}
+
+header .container-header{
+    margin-top: 80px;
+    padding: 140px 130px;
+}
+
+header .container-header h1{
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+/* ....... Efeito writing ....... */
+header .container-header #nome{
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: escreve 3.5s steps(25) infinite alternate, n 800ms steps(10) infinite normal;
+    border-right: 5px solid white;
+}
+
+@keyframes escreve {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 445px;
+    }
+}
+@keyframes n{
+    from{
+        border-color: deepskyblue;
+    }
+    to{
+        border-color: transparent;
+    }
+}
+/* ....... Fim efeito writing ....... */
+
+header .container-header h2{
+    color: black;
+    font-size: 1.6em;
+    margin: 8px 0;
+}
+
+header .container-header p{
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+header .container-header a{
+    text-decoration: none;
+    color: #fff;
+    background-color: deepskyblue;
+    padding: 8px 20px;
+    font-size: 1em;
+    font-weight: 200;
+    border-radius: 8px;
+}
+
+header .container-header a:hover{
+    filter: brightness(1.1);
+}
+
+header .container-header a:active{
+    color: black;
+}
+
+/* ////////////// Container main sobre /////////////// */
+main #sobre{
+    width: 100%;
+    padding: 0 130px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.899);
+    box-shadow: 0px 0px 20px #ddd;
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+main #sobre #imagem-sobre{
+    width: 300px;
+    border-radius: 100px;
+}
+
+main #sobre #container-sobre{
+    margin-top: -80px;
+    margin-left: 50px;
+}
+
+main #sobre #container-sobre img{
+    width: 16px;
+    height: 16px;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+main #sobre #container-sobre h1{
+    font-size: 2.5em;
+    color: #fff;
+}
+
+main #sobre #container-sobre p{
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #fff;
+    font-size: 1em;
+}
+
+main #sobre #container-sobre #transcreverTexto{
+    color: #fff;
+    background-color: deepskyblue;
+    background-image: url(../img/audio.png);
+    background-repeat: no-repeat;
+    background-position: 97% center;
+    background-size: 18px;
+    padding: 8px 30px;
+    font-size: .9em;
+    font-weight: 200;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+main #sobre #container-sobre #transcreverTexto:hover{
+    filter: brightness(1.1);
+}
+
+main #sobre #container-sobre #transcreverTexto:active{
+    color: #000;
+}
+
+main #sobre #container-sobre ul{
+    list-style: none;
+}
+
+main #sobre #container-sobre li{
+    padding: 2px 0;
+}
+
+main #sobre #container-sobre a{
+    text-decoration: none;
+    color: deepskyblue;
+    font-size: 1em;
+}
+
+main #sobre #container-sobre a:hover{
+    border-bottom: 1px solid deepskyblue;
+}
+
+main #sobre #container-sobre a:active{
+    color: black;
+}
+
+section #container-sobre h1{
+    padding: 5px 0 20px 0;
+    margin-top: 30px;
+}
+
+/* ////////////// Container main habilidades /////////////// */
+section #skills{
+    background-color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section #skills h1{
+    font-size: 2.5em;
+}
+
+section #skills #skills-container{
+    display: flex;
+    padding: 50px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+section #skills #skills-container .skill{
+    width: 300px;
+    height: 300px;
+    padding: 80px 40px;
+    margin: 0 30px;
+    background-color: rgba(255, 255, 255, 0.788);
+    box-shadow: 0 0 20px #ddd;
+    border-radius: 7pc 40% 20vh 7em;
+    justify-content: center;
+    align-items: center;
+}
+
+section #skills #skills-container .skill:hover{
+    border-radius: 100%;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+section #skills #skills-container .skill img{
+    width: 100px;
+    height: 110px;
+}
+
+section #skills #skills-container .skill:hover img{
+    margin-top: -50px;
+    transition: .4s;
+    transform: rotate(360deg);
+}
+
+section #skills #skills-container .skill legend{
+    visibility: hidden;
+}
+
+section #skills #skills-container .skill:hover legend{
+    visibility: visible;
+    padding: 0;
+    margin: 8px 0;
+}
+
+section #skills #skills-container .skill legend p{
+    font-size: 10pt;
+    margin: 5px 0;
+    padding: 0;
+    text-align: justify;
+}
+
+/* ////////////// Container main serviços /////////////// */
+section #servicos{
+    background-color: #eee;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section #servicos h1{
+    font-size: 2.5em;
+}
+
+section #servicos #servicos-container{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+section #servicos #servicos-container .servicos{
+    width: 380px;
+    height: 380px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px #ccc;
+    margin: 0 20px;
+    padding: 40px;
+    border-radius: 40px;
+}
+
+section #servicos #servicos-container .servicos:hover{
+    border-radius: 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #ccc;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+section #servicos #servicos-container .servicos p{
+    font-size: 0.9em;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    text-align: justify;
+    display: block;
+}
+
+section #servicos #servicos-container .servicos a{
+    font-size: 0.8em;
+    background-color: deepskyblue;
+    color: #fff;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 20px;
+}
+
+section #servicos #servicos-container .servicos a:hover{
+    filter: brightness(1.1);
+    text-decoration: underline;
+}
+
+/* ////////////// Container main projectos /////////////// */
+section #projectos{
+    background-color: rgba(0, 0, 0, 0.899);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section #projectos h1{
+    font-size: 2.5em;
+}
+
+section #projectos #projectos-container{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+section #projectos #projectos-container img{
+    width: 300px;
+    height: 190px;
+}
+
+section #projectos #projectos-container .projecto{
+    width: 300px;
+    height: 190px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 8px #ddd;
+    margin: 0 10px;
+    padding: 0;
+    border-radius: 30px;
+}
+
+section #projectos #projectos-container .projecto:hover{
+    border-radius: 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ddd;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+section #projectos #projectos-container .projecto legend{
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -195px;
+    background-color: rgba(0, 0, 0, 0.744);
+    padding: 40px 25px;
+    width: 300px;
+    height: 190px;
+    z-index: 100;
+    position: relative;
+}
+
+section #projectos #projectos-container .projecto:hover legend{
+    visibility: visible;
+    opacity: 1;
+    transition: .3s linear;
+}
+
+section #projectos #projectos-container .projecto h4{
+    font-size: 1em;
+    margin: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    color: deepskyblue;
+}
+
+section #projectos #projectos-container .projecto a{
+    font-size: 0.8em;
+    background-color: deepskyblue;
+    color: #fff;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 20px;
+}
+
+section #projectos #projectos-container .projecto a:hover{
+    filter: brightness(1.1);
+    transition: 0.2s;
+}
+
+section #projectos #projectos-container .projecto a:active{
+    color: #000;
+}
+
+/* Efeito Slider com as imagens do projecto */
+.lbox{
+    opacity: 0;
+    display: none;
+}
+
+.lbox:target{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(10, 10, 10, .7);
+    position: fixed;
+    z-index: 100;
+}
+
+.box_img{
+    width: 70%;
+    height: 85%;
+    margin: 100px auto;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px outset #000;
+    background-color: #fff;
+}
+
+.btn{
+    color: deepskyblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#prev{
+    left: 10%;
+    top: 45%;
+}
+
+#prev:hover{
+    background-color: rgba(255, 255, 255, 0.150);
+    border-radius: 100%;
+    transition: .3s linear;
+}
+
+#prev:active{
+    color: #000;
+    transition: .1s linear;
+}
+
+#next{
+    right: 10%;
+    top: 45%;
+}
+
+#next:hover{
+    background-color: rgba(255, 255, 255, 0.150);
+    border-radius: 100%;
+    transition: .3s linear;
+}
+
+#next:active{
+    color: #000;
+    transition: .1s linear;
+}
+
+#close{
+    top: 13%;
+    right: 10%;
+}
+
+#close:hover{
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 100%;
+    transition: .3s linear;
+}
+
+#close:active{
+    color: rgb(186, 12, 12);
+    transition: .1s linear;
+}
+
+/* ////////////// Container footer Contactos /////////////// */
+footer #contacto{
+    text-align: center;
+    background-color: #fff;
+    z-index: 1;
+}
+
+footer #contacto h1{
+    font-size: 2.5em;
+    margin-top: 80px;
+}
+
+footer #contacto form{
+    padding: 40px 0 50px 200px;
+    text-align: left;
+    float: left;
+}
+
+footer #contacto form input, textarea{
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 450px;
+    font-size: 1em;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+footer #contacto form button{
+    background-color: deepskyblue;
+    color: #fff;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+
+footer #contacto form button:hover{
+    filter: brightness(1.1);
+    transition: 0.2s;
+}
+
+footer #contacto form button:active{
+    color: black;
+    transition: 0.2s;
+}
+
+footer #contacto form #usuario{
+    background-image: url(../img/usuario.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 98% center;
+}
+
+footer #contacto form #email{
+    background-image: url(../Img/email.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 98% center;
+}
+
+footer #contacto form #telefone{
+    background-image: url(../Img/telefone.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 98% center;
+}
+
+footer #contacto form #mensagem{
+    background-image: url(../Img/mensagem.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 98% 8px;
+}
+
+footer #contacto img{
+    float: right;
+    margin: 10px 250px 0 0;
+    position: relative;
+    width: 400px;
+}
+
+/* ////////////// Container footer  /////////////// */
+footer #rodape{
+    position: relative;
+    background-color: deepskyblue;
+    border-top: 2px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    clear: both;
+    padding: 10px 150px;
+    display: flex;
+}
+
+footer #rodape article{
+    margin: 0 60px;
+    width: 30%;
+    min-width: 200px;
+    position: relative;
+}
+
+footer #rodape #menu-itens{
+    text-align: start;
+}
+
+footer #rodape #segue-me{
+    text-align: center;
+}
+
+footer #rodape #partenario{
+    text-align: end;
+}
+
+footer #rodape article h4{
+    color: white;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+footer #rodape a{
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+footer #rodape ul{
+    margin: 10px 0 0 0px;
+    list-style: none;
+}
+
+footer #rodape ul li a:hover{
+    color: #eee;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+footer #rodape a .icon{
+   margin: 20px 4px 5px 0;
+}
+
+footer #rodape a .icon:hover{
+    background-color: white;
+    padding: 1px;
+    border-radius: 5px;
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+footer #copy{
+    background-color: deepskyblue;
+    position: relative;
+    padding: 0 50px;
+}
+
+footer #copy p{
+    text-align: center;
+    padding: 10px;
+}
+
+footer hr{
+    border: 0.5px solid rgba(40, 38, 40, 0.123);
+}
